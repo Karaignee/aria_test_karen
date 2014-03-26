@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5</title>
+  <title>ARIA TEST</title>
  
 
   <link rel="stylesheet" href="css/bootstrap-responsive.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/calculator.js"></script>
-
+  <script src="js/timestable.js"></script>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -23,44 +23,59 @@
 
 <ul class="nav nav-pills">
   <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Calculator</a></li>
-  <li><a href="js/timestable.html">Something cool</a></li>
-</ul>
+  <li><a href="#calculator">Calculator</a></li>
+  <li><a href="#timestable">Something cool</a></li>
+ </ul>
+
+
+<h1 class="page-header">Number games</h1>
+
+<a name="calculator"> </a>
+<div class="jumbotron">
+	<div class="container">
+  <h1>Calculator!</h1>
+  <p>Enter two numbers below, and see their output beneath which shows addition, subtraction, multiplication and division.</p>
+</div>
+
+</div>
+
+</br>
+</br>
+
+
+<div class="container">
+
+    <form action="javascript:void(null);" method="post" onSubmit="calculate(this);">
+        <p><label>Number 1: <input type="number" /></label></p>
+        <p><label>Number 2: <input type="number" /></label></p>
+        <p><button type="submit" value="Calculate" class="btn btn-success">Calculate</button></p>     
+        <p>N1 + N2 = <span>-</span></p>
+        <p>N1 - N2 = <span>-</span></p>
+        <p>N1 * N2 = <span>-</span></p>
+        <p>N1 / N2 = <span>-</span></p>     
+        
+    </form>
+  </div>
+
+</br>
+</br>
 
 
 <div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  <div class="container">
+  		<a name="timestable"> </a>
+
+  <h1>Timestable!</h1>
+  <p>Enter a number in the box to see its timestable shown beneath.</p>
 </div>
 
+</div>
 
-	<div>
-		  <form action="javascript:void(null);" method="post" onSubmit="calculate(this);">
-		        <p><label>Number 1: <input type="number" /></label></p>
-		        <p><label>Number 2: <input type="number" /></label></p>
-		        <p><input type="submit" value="Calculate" /></p>
-		        <p>First plus Second = <span>-</span></p>
-		        <p>First minus Second = <span>-</span></p>
-		        <p>First times Second = <span>-</span></p>
-		        <p>First divided by Second = <span>-</span></p>
-		    </form>
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="container">
+<input type="text" id="multipleOf" value="">
+<button onclick="multiplier()">Times Table</button>
+<div id="multTable"> <h2>Times Table</h2> </div>
+</div>
 
 
   <script src="js/scripts.js"></script>

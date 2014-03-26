@@ -1,50 +1,30 @@
 
 <html>
 <head>
-<script>
-function details_prompt()
-  {
-  var fname=prompt("Please enter your name:","Your name")
-  document.getElementById("msg1").innerHTML="Your Name: " + fname
-  var age=prompt("Please enter your age:", "Your Age")
-  document.getElementById("msg2").innerHTML="Your Age: " + age
-  }
+  <link rel="stylesheet" href="css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
-
-function multiplier() {
-  var mult = document.getElementById('multipleOf').value;
-  var str = '';
-  str += '<table class="table">';
-  str += '<caption> Multiples of: '+mult+'</caption>';
-  str += '<tr>';
-  for (var i=0; i<10; i++) {
-    str += '<td style="text-align:left">';
-    str +=  mult  + ' x ' + i + ' = ';
-    str += mult * i;
-    str += '</td>';
-  }
-  str += '</tr>'
-  str += '</table>';
-  document.getElementById('multTable').innerHTML = '<h2>Times Table</h2>'+str;
-}
-
-</script>
+ <script src="timestable.js"></script>
 
 </head>
 <body>
 
-<input type="button" onclick="details_prompt()" value="Display a prompt box">
-<br><br>
+<h1 class="page-header">Timestable</h1>
 
+<div class="jumbotron">
+  <div class="container">
+  <h1>Hello, again!</h1>
+  <p>Enter a number in the box to see its timestable shown beneath.</p>
+</div>
 
-<div id="msg1"></div>
-<br />
-<div id="msg2"></div>
-<br />
+</div>
 
+<div class="container">
 <input type="text" id="multipleOf" value="">
 <button onclick="multiplier()">Times Table</button>
 <div id="multTable"> <h2>Times Table</h2> </div>
-
+</div>
 </body>
 </html>

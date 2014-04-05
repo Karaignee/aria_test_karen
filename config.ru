@@ -11,7 +11,7 @@ use Rack::Static,
            #'Content-Type'  => 'text/html',
            'Cache-Control' => '., max-age=86400'
        },
-       File.open('index.html', 'chart_test.html' File::RDONLY)
+       File.open('index.html', 'chart_test.html', File::RDONLY)
    ]
  }
 
